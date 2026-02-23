@@ -74,11 +74,6 @@ const sessionOption = {
 };
 
 
-app.get("/", (req, res) => {
-    res.send("Server chal raha hai 🔥");
-});
-
-
 app.use(session(sessionOption));
 app.use(flash());
 
