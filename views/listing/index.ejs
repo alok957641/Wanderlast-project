@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate") %>
+
+
+    <body>
+        <div class="container my-4">
+            <div id="filter">
+                <div class="filter">
+                    <i class="fa-solid fa-house-fire"></i>
+                    Trending
+                </div>
+
+                <div class="filter">
+                    <i class="fa-solid fa-bed"></i>
+                    Rooms
+                </div>
+
+                <div class="filter">
+                    <i class="fa-solid fa-mountain-city"></i>
+                    Iconic Cities
+                </div>
+
+                <div class="filter">
+                    <i class="fa-solid fa-mountain"></i>
+                    Mountain
+                </div>
+                <div class="filter">
+                    <i class="fa-solid fa-vihara"></i>
+                    Castles
+                </div>
+                <div class="filter">
+                    <i class="fa-solid fa-person-swimming"></i>
+                    Amazing Pool
+                </div>
+                <div class="filter">
+                    <i class="fa-solid fa-campground"></i>
+                    Campign
+                </div>
+                <div class="filter">
+                    <i class="fa-solid fa-building-wheat"></i>
+                    Farms
+                </div>
+                <div class="filter">
+                    <i class="fa-brands fa-galactic-republic"></i>
+                    Arctic
+                </div>
+
+
+            </div>
+
+
+            <div class="row g-4">
+                <% for (let listing of alllisting) { %>
+
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <a href="/listing/<%=listing._id %>" class="lsiting-link">
+                            <div class="card listing-card h-100 ">
+                                <img src="<%= listing.image.url %>" class="card-img-top listing-img"
+                                    alt="listing image">
+                                <div class="card-img-overlay">
+                                    ABC
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= listing.title %>
+                                    </h5>
+
+                                    <p class="price">
+                                        ₹ <%= listing.price.toLocaleString('en-IN') %>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+
+                    <% } %>
+            </div>
+        </div>
+    </body>

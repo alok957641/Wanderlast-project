@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+
+  <!-- LEFT : TOGGLER + BRAND -->
+  <div class="d-flex align-items-center">
+    <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar">
+     <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="/listing">
+      <i class="fa-solid fa-compass me-2 brand-icon"></i>
+      WanderLust
+    </a>
+  </div>
+
+  <!-- COLLAPSE AREA -->
+  <div class="collapse navbar-collapse" id="mainNavbar">
+
+    <!-- CENTER SEARCH -->
+    <form action="" method="" class="search-wrapper mx-auto my-3 my-lg-0">
+      <input type="text" placeholder="Search destinations, homes, experiences" name="q">
+      <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+
+    <!-- RIGHT BUTTONS -->
+    <div class="nav-actions ms-lg-auto d-flex align-items-center gap-2">
+
+      <a href="/listing/new" class="btn btn-primary rounded-pill px-3 fw-semibold">
+        <i class="fa-solid fa-plus me-1"></i> List your home
+      </a>
+
+      <% if(!curruser){ %>
+        <a href="/signup" class="btn btn-outline-dark rounded-pill btn-sm fw-semibold">
+          Sign up
+        </a>
+        <a href="/login" class="btn btn-outline-primary rounded-pill btn-sm fw-semibold">
+          Log in
+        </a>
+      <% } %>
+
+      <% if(curruser){ %>
+        <a href="/logout" class="btn btn-outline-danger rounded-pill btn-sm fw-semibold">
+          Logout
+        </a>
+      <% } %>
+
+    </div>
+  </div>
+</nav>

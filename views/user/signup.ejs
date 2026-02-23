@@ -1,0 +1,35 @@
+<% layout("/layouts/boilerplate") %>
+
+
+    <div class="signupmain-box">
+
+        <div class="signup-card">
+            <h2 class="signup-title">SignUp – Wanderlast</h2>
+
+            <form action="/signup" method="POST">
+                <!-- Username -->
+                <div class="mb-3">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" class="form-control" name="username"  id="username" placeholder="Enter username" required>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" name="email" class="form-control email" id="email"  placeholder="Enter email" required>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-3">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter password" required>
+                </div>
+
+                <!-- Button -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-custom">Sign Up</button>
+                </div>
+            </form>
+        </div>
+
+    </div>

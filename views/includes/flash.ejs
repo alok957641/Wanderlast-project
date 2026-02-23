@@ -1,0 +1,19 @@
+<% if ((success && success.length) || (error && error.length)) { %>
+  <div class="container mt-3 col-6 offset-3">
+
+    <% if (success && success.length) { %>
+      <div class="alert custom-alert success-alert">
+        <span><%= success %></span>
+        <button class="alert-close" onclick="this.parentElement.remove()">✕</button>
+      </div>
+    <% } %>
+
+    <% if (error && error.length) { %>
+      <div class="alert custom-alert error-alert">
+        <span><%= error %></span>
+        <button class="alert-close" onclick="this.parentElement.remove()">✕</button>
+      </div>
+    <% } %>
+
+  </div>
+<% } %>

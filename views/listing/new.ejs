@@ -1,0 +1,48 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <div class="container edit-container">
+        <h1 class="edit-title text-center">Add New Listing</h1>
+    <form action="/listing" method="post" class="edit-form" enctype="multipart/form-data">
+         <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input type="text" name="listing[title]" 
+                    placeholder="Enter Title" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <textarea name="listing[description]" rows="4"
+                    placeholder="Enter description" class="form-control" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Image</label>
+                <input type="file" name="listing[image]"
+                   class="form-control" required>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-4 mb-3">
+                    <label class="form-label">Price</label>
+                    <input name="listing[price]" type="number"
+                        placeholder="Enter Price" class="form-control"  required >
+                </div>
+
+                <div class="col-12 col-md-8 mb-3">
+                    <label class="form-label">Country</label>
+                    <input type="text" name="listing[country]"
+                        placeholder="Enter your Country" class="form-control" required >
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Location</label>
+                <input type="text" name="listing[location]"
+                    placeholder="Enter your location" class="form-control" required >
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary px-5">Add</button>
+            </div>
+    </form>
+</body>
