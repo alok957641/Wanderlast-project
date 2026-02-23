@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const Review = require("./Review");
-const { Type } = require("lucide-react");
 const user = require("./user");
 const Schema = mongoose.Schema ; 
 
